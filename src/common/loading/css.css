@@ -1,0 +1,45 @@
+.loading {
+    z-index: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,.2);
+}
+.loading .img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: .7rem;
+    height: .7rem;
+    margin: -.35rem 0 0 -.35rem;
+    border-radius: .1rem;
+    background-size: 2.1rem;
+    background: #fff;
+}
+.loading .img img{
+    height: 120%;
+    width: 120%;
+    margin: -0.27rem 0 0 -0.07rem;
+}
+@keyframes gjEMDO{
+    0%{transform: rotate(0deg)}
+    
+    100%{transform:rotate(360deg)}
+}
+.rotate{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: .46rem;
+    width: .46rem;
+    margin: -.23rem 0 0 -.23rem;
+    border-radius:.23rem;
+    border: solid rgba(255,255,255,0.8);
+    border-width: .00667rem;
+    border-top-color: #ff464e;
+    border-right-color: #ff464e;
+    animation: gjEMDO .7s linear infinite forwards;
+}
