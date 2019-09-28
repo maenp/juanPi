@@ -75,7 +75,3 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SortList)
-
-
-//s2.juancdn.com/bao/170502/3/2/5908496ca43d1f7f665137b7_200x200.png
-// /bao/170502/3/2/5908496ca43d1f7f665137b7_200x200.png
