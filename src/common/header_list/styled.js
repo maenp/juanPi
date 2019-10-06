@@ -11,6 +11,7 @@ export const HeaderListSty = styled.div`
     background: #fff;
     position: relative;
     top:0;
+    z-index:11;
     border-bottom: 1px solid #ebebeb;
     i:nth-of-type(2){
         margin-left:.1rem;

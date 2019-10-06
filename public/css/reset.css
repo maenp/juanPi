@@ -26,6 +26,9 @@ html{
     
     font-size: 26.6666vw;
 }
+#root{
+    height: 100%;
+}
 
 
 

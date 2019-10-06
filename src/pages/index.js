@@ -5,14 +5,14 @@ export const Home=Loadable({
     loader:()=>import('./home'),
     loading:Loading
 })
-export const HomeONE=Loadable({
-    loader:()=>import('./home/homeONE'),
-    loading:Loading
-})
-export const HomeTWO=Loadable({
-    loader:()=>import('./home/homeTWO'),
-    loading:Loading
-})
+// export const HomeONE=Loadable({
+//     loader:()=>import('./home/homeONE'),
+//     loading:Loading
+// })
+// export const HomeTWO=Loadable({
+//     loader:()=>import('./home/homeTWO'),
+//     loading:Loading
+// })
 export const Eat=Loadable({
     loader:()=>import('./eat'),
     loading:Loading
@@ -43,5 +43,9 @@ export const Search=Loadable({
 })
 export const List=Loadable({
     loader:()=>import('./list'),
+    loading:Loading
+})
+export const Goods=Loadable({
+    loader:()=>import('./goods'),
     loading:Loading
 })

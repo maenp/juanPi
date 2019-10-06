@@ -1,4 +1,4 @@
-const { override, fixBabelImports ,addWebpackAlias} = require('customize-cra');
+const { override, fixBabelImports ,addWebpackAlias, addDecoratorsLegacy} = require('customize-cra');
 const path=require('path')
 module.exports = override(
     //按需加载
@@ -7,6 +7,7 @@ module.exports = override(
         libraryDirectory: 'es',
         style: 'css',
     }),
+    //配置别名
     addWebpackAlias({
         "@":path.join(__dirname,"./src"),
         "@components":path.join(__dirname,"./src/components"),
@@ -19,5 +20,7 @@ module.exports = override(
         "@store":path.join(__dirname,"./src/store"),
         "@utils":path.join(__dirname,"./src/utils"),
         "@hoc":path.join(__dirname,"./src/hoc"),
-    })
+    }),
+    //配置装饰器的
+    addDecoratorsLegacy()
 ); 

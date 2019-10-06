@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
-import { post, get } from '@utils/http'
+import {PageContainer} from './../../globalStyled'
+import Header from '@common/mineHeader'
 
 export default class Mine extends Component {
     render() {
         return (
-            <div>
+            <PageContainer>
+                <Header title='个人中心' 
+                style={{
+                    border:'none'
+                }}
+                />
                 我的
-            </div>
+            </PageContainer>
         )
     }
-    async componentDidMount(){
-        // var data=await get('cate/catelist?pf=8&area=4&bi=222&dtype=jsonp&_=1569584661375&callback=jsonp1')
-        // console.log(data,999)
-    }
+
     
 }

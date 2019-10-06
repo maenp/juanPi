@@ -32,7 +32,7 @@ export const SortListSty = styled.div`
         box-sizing:border-box;
         width:75%;
         float:right;
-        background:666;
+        background:#fff;
         ul{
             display:flex;
             flex-wrap:wrap;

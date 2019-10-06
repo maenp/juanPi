@@ -1,7 +1,22 @@
 import React, { Component } from 'react'
 import { HeaderListSty } from './styled'
 import {Link} from 'react-router-dom'
-export default class Header_list extends Component {
+import {connect} from 'react-redux'
+import {LIST_HEAD} from '@actions/actionCreate'
+const mapStateToProps = (state) => {
+    return {
+        goodsList: state.goodsList
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch1: () => {
+            dispatch(LIST_HEAD())
+        }
+    }
+}
+@connect(mapStateToProps,mapDispatchToProps)
+class Header_list extends Component {
     constructor() {
         super()
         this.state = {
@@ -30,8 +45,9 @@ export default class Header_list extends Component {
     render() {
         let { title } = this.props
         let { meunList } = this.state
+        let {headHide}=this.props.goodsList
         return (
-            <HeaderListSty>
+            <HeaderListSty style={{display:headHide?'none':'flex'}}>
                 <i
                     onClick={this.backHandler.bind(this)}
                     className="iconfont">{'\ue605'}</i>
@@ -67,12 +83,13 @@ export default class Header_list extends Component {
     }
     menuHandler() {
         if (this.display) {
-            this.refs.meun.style.display = 'block'
+            this.refs.meun.style.display = 'none'
             this.display = 0
         } else {
-            this.refs.meun.style.display = 'none'
+            this.refs.meun.style.display = 'block'
             this.display = 1
         }
         // this.refs.menu.style.display='block'
     }
 }
+export default Header_list

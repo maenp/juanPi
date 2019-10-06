@@ -1,4 +1,4 @@
-import {List,Search,Home,Eat,Mine,Shopper,Sort,Login,HomeONE,HomeTWO,City} from '@pages'
+import {Goods,List,Search,Home,Eat,Mine,Shopper,Sort,Login,HomeONE,HomeTWO,City} from '@pages'
 
 export const tabBarRoute=[
     {
@@ -8,28 +8,28 @@ export const tabBarRoute=[
         icon:"goods4.juancdn.com/bao/171127/6/0/5a1bce9a8150a16b4e766a8d_72x72.png",
         component:Home,
         exact:1,
-        children:[
-            {
-                path:"/home/one",
-                name:"首页ONE",
-                icon:"",
-                component:HomeONE,
-                exact:1,
+        // children:[
+        //     {
+        //         path:"/home/one",
+        //         name:"首页ONE",
+        //         icon:"",
+        //         component:HomeONE,
+        //         exact:1,
                 meta:{
                     tabBar:1
                 },
-            },
-            {
-                path:"/home/two",
-                name:"首页TWO",
-                icon:"",
-                component:HomeTWO,
-                exact:1,
-                meta:{
-                    tabBar:1
-                },
-            },
-        ]
+        //     },
+        //     {
+        //         path:"/home/two",
+        //         name:"首页TWO",
+        //         icon:"",
+        //         component:HomeTWO,
+        //         exact:1,
+        //         meta:{
+        //             tabBar:1
+        //         },
+        //     },
+        // ]
     },
     {
         path:"/sort/:id/:titie",
@@ -93,6 +93,13 @@ export const NotabBarRoute=[
         name:"商品列表",
         icon:"",
         component:List,
+        exact:1,
+    },
+    {
+        path:"/goods/:id",
+        name:"商品详情页面",
+        icon:"",
+        component:Goods,
         exact:1,
     },
 ]
